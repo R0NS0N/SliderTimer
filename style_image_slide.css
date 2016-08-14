@@ -1,0 +1,110 @@
+
+body{background-image: url('./tweed.png'); padding: 0px; margin:0px;}
+/*-------------------------Загальний контейнер-----------------*/
+div, ul{padding: 0px;margin:0px;}
+
+#slide_block
+{
+	margin: 0 auto;
+	border:1px solid #CFCFCF;
+	max-width: 650px;
+	max-height: 370px;
+	margin-top: 50px;
+}
+
+#slide_body
+{
+	padding-top: 4px;
+	padding-left: 4px;
+	min-height: 370px;
+	position: relative;
+}
+
+.images_box{position: relative;
+}
+
+span.but_left
+{
+	position: absolute;
+	top: 140px;
+	left: 0px;
+	width: 50px;
+	height: 50px;
+	z-index: 200;
+}
+
+span.but_right
+{
+	position: absolute;
+	top: 140px;
+	right: 0px;
+	width: 100px;
+	height: 50px;
+	z-index: 200;
+}
+
+span > img
+{
+	width: 100px;
+	float: left;
+	opacity: .2;
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=20);
+}
+
+span > img:hover
+{
+	opacity: 1;
+}
+
+.img_slide_elem
+{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	opacity: 0;
+	 transition: opacity 1s cubic-bezier(.1, .9, .9, 1.5);
+    -moz-transition: opacity 1s cubic-bezier(.1, .9, .9, 1.5);
+    -webkit-transition: opacity 1s cubic-bezier(.1, .9, .9, 1.5);
+}
+
+.active_img
+{
+	opacity: 1;
+	transition: opacity 0.3s, visibility 0s linear 0.3s;
+    -moz-transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
+}
+
+ul#slide_list_img
+{
+	position: absolute;
+	bottom: 5%;
+	right: 5%;
+}
+#slide_list_img > li 
+{
+	width: 20px;
+	height: 20px;
+	list-style: none;
+	background-color: #49B293;
+	border-radius: 50%;
+	margin-right: 5px;
+	display: inline-block;
+}
+
+#slide_list_img > li > a 
+{
+	width: 10px;
+	height: 10px;
+	background-color: #D0FF00;
+	border-radius: 50%;
+	float: left;
+	position: relative;
+	top: 5px;
+	left: 5px;
+}
+
+#slide_list_img > li.slide_active > a
+{
+	background-color: white;
+}
